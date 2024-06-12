@@ -1,1 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu" sans-Serif;
+  font-weight: 300;
+  box-sizing: border-box;
+  z-index: 8; /** дефолтный слой для всех **/
+}
+
+body {
+  position: relative;
+}
+
+
+/** -- СТИЛИ САЙТА -- **/
+header {
+  height: 100vh;
+  background-image: url('../resources/imgs/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-position-y: 250px;
+  background-color: #000;
+}
+
+.container {
+  padding: 80px;
+}
+
+.line-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+  opacity: .7;
+  transition: opacity .1s;
+}
+
+.menu li a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #FF7400;
+  content: '';
+  transition: width .1s ease-out;
+}
+
+.menu li a:hover:after,
+.menu li a:focus:after {
+  width: 100%;
+}
+
+.menu li a:hover {
+  opacity: 1;
+}
+
+.logo {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-family: 'Shadows Into Light', cursive;
+  transition: all .1s;
+}
+
+.logo:hover {
+  color: #FF7400;
+}
+
+.button {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  width: 120px;
+  background: #FF7400;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  opacity: .7;
+  font-weight: 370;
+  transition: all .1s ease-out;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.box-container {
+  margin-top: 230px;
+}
+
+.box-container p {
+  color: white;
+  font-size: 50px;
+  line-height: 10px;
+}
+
+.box-container .logo {
+  font-size: 100px;
+  color: #FF7400;
+}
+
+#shop-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+
+
+
+/** -- КАРТОЧКА -- **/
+.card {
+  height: 500px;
+  width: 420px;
+  display: inline-block;
+  margin: 20px;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, .1);
+}
+
+.card .preview {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.card .buy {
+  height: 40px;
+  width: 100%;
+  border: none;
+  background: #72cb68;
+  color: white;
+  font-size: 24px;
+  margin-top: 5px;
+  transition: all .1s;
+}
+
+.card .buy:hover {
+  background: #56bf4a;
+}
+
+.card h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+
+.card h2 {
+  font-size: 30px;
+  padding-left: 15px;
+}
+
+
+
+/** -- ФУТЕР -- **/
+footer {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  bottom: 0;
+}
+
+footer .container-footer {
+  padding: 0 80px 0 80px;
+}
+
+.svg-logo {
+  background: #FFF;
+  height: 40px;
+  width: 40px;
+  margin-left: 25px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+/** -- МОДАЛЬНОЕ ОКНО -- **/
+#modal {
+  position: fixed;
+  height: 80vh;
+  width: 80%;
+  box-shadow: 5px 5px 16px #000;
+  background: #FFF;
+  top: 0;
+  margin: 10%;
+  margin-top: 10vh;
+  z-index: 10;
+  display: none;
+  overflow: scroll;
+}
+
+#modal .modal-title {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, .5);
+}
+
+#modal #modal-hidden {
+  width: 100%;
+  height: calc(98% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#black-top {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: #000;
+  top: 0;
+  opacity: .5;
+  z-index: 9;
+  display: none;
+}
